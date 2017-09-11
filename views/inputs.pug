@@ -1,0 +1,11 @@
+extend test.pug
+include testEXTEND.pug
+
+block content
+    form(method='POST' action='register')
+        -for(var x = 0; x < 10; x++){
+            +input(x)
+
+            -}
+        button.btn.btn-primary(type='confirm')
+        button.btn.btn-primary(type='submit' name='cancel')
